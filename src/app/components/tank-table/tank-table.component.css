@@ -1,4 +1,20 @@
 .container{
     background: url("../../../assets/planta.png");
-    background-size:cover;
+    background-size:100%;
 }
+
+td.left{
+    text-align: left;
+
+}
+td.right{
+    text-align: right;
+
+}
+td.center{
+    text-align: center;
+
+}
+/* table, th, td {
+    border: 1px solid black;
+  } */
