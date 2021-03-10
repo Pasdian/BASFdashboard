@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Tank } from '../../tank';
+import { ActivatedRoute } from '@angular/router';
+import { TanksService, Tank } from 'src/app/services/tanks.service';
 
 @Component({
   selector: 'app-tanks',
@@ -8,35 +9,14 @@ import { Tank } from '../../tank';
 })
 export class TanksComponent implements OnInit {
 
-  tank : Tank = {
-    id: 1,
-    name: 'Tanque 1',
-    materialDescription: "materialDesc",
-    batchNo: "batchNo",
-    batchSize: "batchSize",
-    Client: "Client",
-    deliveryDate: "deliveryDate",
-    startDate: "StartDate",
-    currentStatus: currentStatus.Cargando,
-    semaphore: semaphore.green
-  };
+  tanks: Tank[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private tanksSerivce: TanksService) {
   }
 
-}
-enum currentStatus{
-  Cargando = "Cargando",
-  EC = "Entonado/Calidad",
-  porEnvasar = "Por envasar",
-  Envasando = "Envasando"
-}
+  ngOnInit(): void {
+    this.tanks = this.tanksSerivce.getTanks();
+    console.log(this.tanks);
+  }
 
-enum semaphore{
-  red,
-  yellow,
-  green,
-  purple
 }

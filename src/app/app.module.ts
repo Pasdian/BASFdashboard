@@ -6,21 +6,19 @@ import { HeadingComponent } from './components/common/heading/heading.component'
 import { TankTableComponent } from './components/tank-table/tank-table.component';
 import { TanksComponent } from './components/tanks/tanks.component';
 
-import { APP_ROUTING } from "./app.routes";
+import { APP_ROUTING } from './app.routes';
+
+import { TanksService } from './services/tanks.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadingComponent,
     TankTableComponent,
-    TanksComponent
+    TanksComponent,
   ],
-  imports: [
-    BrowserModule,
-    APP_ROUTING
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, APP_ROUTING],
+  providers: [TanksService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
