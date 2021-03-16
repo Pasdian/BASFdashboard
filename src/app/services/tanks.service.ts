@@ -1,10 +1,18 @@
 import { Injectable } from '@angular/core';
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+
+// import { Hero } from './hero';
+// import { MessageService } from './message.service';
+
 @Injectable()
 export class TanksService {
   private tanks: Tank[] = [
     {
-      accordionNo: 'One',
+      id: 1,
 
       nombre: 'Tanque 1',
       matDescrption: 'Agua',
@@ -16,7 +24,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Two',
+      id: 2,
 
       nombre: 'Tanque 2',
       matDescrption: 'Agua',
@@ -28,7 +36,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Three',
+      id: 3,
 
       nombre: 'Tanque 3',
       matDescrption: 'Agua',
@@ -40,7 +48,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Four',
+      id: 4,
 
       nombre: 'Tanque 4',
       matDescrption: 'Agua',
@@ -52,7 +60,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Five',
+      id: 5,
 
       nombre: 'Tanque 5',
       matDescrption: 'Agua',
@@ -64,7 +72,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Six',
+      id: 6,
 
       nombre: 'Tanque 6',
       matDescrption: 'Agua',
@@ -76,7 +84,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Seven',
+      id: 7,
 
       nombre: 'Tanque 7',
       matDescrption: 'Agua',
@@ -88,8 +96,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Eight',
-
+      id: 8,
       nombre: 'Tanque 8',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -101,7 +108,7 @@ export class TanksService {
     },
 
     {
-      accordionNo: 'Nine',
+      id: 9,
       nombre: 'Tanque 9',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -112,7 +119,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Ten',
+      id: 10,
       nombre: 'Tanque 10',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -123,7 +130,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Eleven',
+      id: 11,
       nombre: 'Tanque 11',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -134,7 +141,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Twelve',
+      id: 12,
       nombre: 'Tanque 12',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -145,7 +152,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Thirteen',
+      id: 13,
       nombre: 'Tanque 13',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -156,7 +163,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Fourteen',
+      id: 14,
       nombre: 'Tanque 14',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -167,7 +174,7 @@ export class TanksService {
       status: 'green',
     },
     {
-      accordionNo: 'Fifteen',
+      id: 15,
       nombre: 'Tanque 15',
       matDescrption: 'Agua',
       batchNo: '1',
@@ -187,13 +194,13 @@ export class TanksService {
     return this.tanks;
   }
 
-  getTank(id: string): Tank {
+  getTank(id: number): Tank {
     return this.tanks[id];
   }
 }
 
 export interface Tank {
-  accordionNo: string;
+  id: number;
   nombre: string;
   matDescrption: string;
   batchNo: string;

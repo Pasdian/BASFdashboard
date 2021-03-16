@@ -1,0 +1,11 @@
+<div *ngIf="tank">
+    <h2>{{tank.nombre | uppercase}} Detalles</h2>
+    <div><span>id: </span>{{tank.id}}</div>
+    <div>
+      <label for="tank-name">Nombre del tanque: </label>
+      <input id="tank-name" [(ngModel)]="tank.nombre" placeholder="Nombre"/>
+    </div>
+    <button (click)="goBack()">Regresar</button>
+    <button (click)="save()">Guardar</button>
+  </div>
+  
