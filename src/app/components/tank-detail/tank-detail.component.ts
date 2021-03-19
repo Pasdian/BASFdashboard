@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Tank, TanksService } from 'src/app/services/tanks.service';
+import { TanksService } from 'src/app/services/tanks.service';
 import { Location } from '@angular/common';
+import { Tank } from "../../Tank";
+
 
 
 @Component({
@@ -11,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class TankDetailComponent implements OnInit {
 
-  tank: Tank;
+  tank?: Tank;
 
   constructor(
     private route: ActivatedRoute,

@@ -1,4 +1,21 @@
-<div class="d-grid gap-2"  >
+<h2>Tanques</h2>
+<ul class="tanks" data-columns="2">
+  <li
+    *ngFor="let tank of tanks"
+    (click)="onSelect(tank)"
+    [class.selected]="tank === selectedTank"
+  >
+    <span class="badge">{{ tank.id }}</span> 
+    <button type="button" class="btn btn-outline-primary" routerLink="/detail/{{tank.id}}">{{ tank.nombre }}</button>
+
+  </li>
+</ul>
+
+
+
+
+
+<!-- <div class="d-grid gap-2"  >
   <button
     class="btn btn-outline-primary"
     *ngFor="let tank of tanks; let i = index"
@@ -6,7 +23,7 @@
   >
     {{ tank.nombre }}
   </button>
-</div>
+</div> -->
 
 <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 <!-- <div
