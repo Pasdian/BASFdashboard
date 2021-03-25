@@ -12,6 +12,7 @@ import { TankDetailComponent } from './components/tank-detail/tank-detail.compon
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SolventeTableComponent } from './components/solvente-table/solvente-table.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     TanksComponent,
     TankDetailComponent,
     MessagesComponent,
+    SolventeTableComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [TanksService],
