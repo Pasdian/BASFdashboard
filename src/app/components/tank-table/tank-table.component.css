@@ -15,6 +15,9 @@ td.center{
     text-align: center;
 
 }
-/* table, th, td {
+.btn-sm {
+    font-size: 70%;
+}
+table, th, td {
     border: 1px solid black;
-  } */
+  }
