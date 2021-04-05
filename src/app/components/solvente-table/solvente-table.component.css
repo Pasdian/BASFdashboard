@@ -16,14 +16,11 @@ td.center{
 
 }
 
-table, th, td {
-    border: 1px solid black;
-  }
+/* table, th, td {
+    border: 1px solid ;
+  } */
 
 .btn-sm {
     max-width: 110%;
    font-size: x-small;
-   
-
-
 }
