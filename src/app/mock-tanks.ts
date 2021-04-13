@@ -2,7 +2,7 @@ import { Tank } from './Tank';
 
 export const TANKS: Tank[] = [
   {
-    id: 1,
+    id: 'TM23401',
 
     nombre: 'TM-23401',
     matDescrption: 'Agua',
@@ -14,7 +14,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 2,
+    id: "TM23402",
 
     nombre: 'TM-23402',
     matDescrption: 'Agua',
@@ -26,7 +26,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 3,
+    id: "TM23403",
 
     nombre: 'TM-23403',
     matDescrption: 'Agua',
@@ -38,7 +38,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 4,
+    id: "TM23417",
 
     nombre: 'TM-23417',
     matDescrption: 'Agua',
@@ -50,7 +50,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 5,
+    id: "TM23405",
 
     nombre: 'TM-23405',
     matDescrption: 'Agua',
@@ -62,7 +62,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 6,
+    id: "TM23406",
 
     nombre: 'TM-23406',
     matDescrption: 'Agua',
@@ -74,7 +74,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 7,
+    id: "TM23407",
 
     nombre: 'TM-23407',
     matDescrption: 'Agua',
@@ -86,7 +86,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 8,
+    id: "TM23408",
     nombre: 'TM-23408',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -98,7 +98,7 @@ export const TANKS: Tank[] = [
   },
 
   {
-    id: 9,
+    id: "TM23409",
     nombre: 'TM-23409',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -109,7 +109,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 10,
+    id: "TM23410",
     nombre: 'TM-23410',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -120,7 +120,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 11,
+    id: "TM23411",
     nombre: 'TM-23411',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -131,7 +131,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 12,
+    id: "TM23414",
     nombre: 'TM-23414',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -142,7 +142,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 13,
+    id: "TM23415",
     nombre: 'TM-23415',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -153,7 +153,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 14,
+    id: "TM23416",
     nombre: 'TM-23416',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -230,7 +230,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 201,
+    id: "21401",
 
     nombre: '21401',
     matDescrption: 'Agua',
@@ -242,7 +242,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 202,
+    id: "21402",
 
     nombre: '21402',
     matDescrption: 'Agua',
@@ -254,7 +254,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 203,
+    id: "21403",
 
     nombre: '21403',
     matDescrption: 'Agua',
@@ -266,7 +266,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 204,
+    id: "21404",
 
     nombre: '21404',
     matDescrption: 'Agua',
@@ -278,7 +278,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 205,
+    id: "21405",
 
     nombre: '21405',
     matDescrption: 'Agua',
@@ -290,7 +290,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 206,
+    id: "21406A",
 
     nombre: '21406A',
     matDescrption: 'Agua',
@@ -302,7 +302,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 207,
+    id: "21406B",
 
     nombre: '21406B',
     matDescrption: 'Agua',
@@ -314,7 +314,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 208,
+    id: "21407",
     nombre: '21407',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -326,7 +326,7 @@ export const TANKS: Tank[] = [
   },
 
   {
-    id: 209,
+    id: "2114",
     nombre: '2114',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -337,7 +337,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 210,
+    id: "2115",
     nombre: '2115',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -348,7 +348,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 211,
+    id: "21413",
     nombre: '21413',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -359,7 +359,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 212,
+    id: "21414",
     nombre: '21414',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -370,7 +370,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 213,
+    id: "21415",
     nombre: '21415',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -381,7 +381,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 214,
+    id: "21416",
     nombre: '21416',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -392,7 +392,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 215,
+    id: "215",
     nombre: '21417',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -403,7 +403,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 216,
+    id: "216",
     nombre: '21419',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -414,7 +414,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 217,
+    id: "21420",
     nombre: '21420',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -425,7 +425,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 218,
+    id: "21421",
     nombre: '21421',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -436,7 +436,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 219,
+    id: "21422",
     nombre: '21422',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -447,7 +447,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 220,
+    id: "21423",
     nombre: '21423',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -458,7 +458,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 221,
+    id: "21424",
     nombre: '21424',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -469,7 +469,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 222,
+    id: "21425",
     nombre: '21425',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -480,7 +480,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 223,
+    id: "21426",
     nombre: '21426',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -491,7 +491,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 224,
+    id: "21427",
     nombre: '21427',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -502,7 +502,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 225,
+    id: "21428",
     nombre: '21428',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -513,7 +513,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 226,
+    id: "21429",
     nombre: '21429',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -524,7 +524,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 227,
+    id: "21430",
     nombre: '21430',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -535,7 +535,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 228,
+    id: "21431",
     nombre: '21431',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -546,7 +546,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 229,
+    id: "21432",
     nombre: '21432',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -557,7 +557,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 230,
+    id: "21433",
     nombre: '21433',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -568,7 +568,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 231,
+    id: "21434",
     nombre: '21434',
     matDescrption: 'Agua',
     batchNo: '1',
@@ -579,7 +579,7 @@ export const TANKS: Tank[] = [
     status: 'green',
   },
   {
-    id: 232,
+    id: "21435",
     nombre: '21435',
     matDescrption: 'Agua',
     batchNo: '1',
