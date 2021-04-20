@@ -1,0 +1,57 @@
+<h2>Tanques</h2>
+<ul class="tanks" data-columns="2">
+  <li
+    *ngFor="let tank of tanks"
+    (click)="onSelect(tank)"
+    [class.selected]="tank === selectedTank"
+  >
+    <span class="badge">{{ tank.id }}</span> 
+    <button type="button" class="btn btn-outline-primary" routerLink="/detail/{{tank.id}}">{{ tank.id }}</button>
+
+  </li>
+</ul>
+
+
+
+
+
+<!-- <div class="d-grid gap-2"  >
+  <button
+    class="btn btn-outline-primary"
+    *ngFor="let tank of tanks; let i = index"
+    type="button"
+  >
+    {{ tank.nombre }}
+  </button>
+</div> -->
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+<!-- <div
+  class="card mb-3"
+  style="max-width: 540px"
+  *ngFor="let tank of tanks; let i = index"
+>
+  <div class="row g-0">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ tank.nombre }}</h5>
+        <p class="card-text">
+          Nombre: {{ tank.nombre }}<br />
+          Material Descrption: {{ tank.matDescription }}<br />
+          Batch No. : {{ tank.batchNo }}<br />
+          Cliente: {{ tank.client }} <br />
+          Start Date: {{ tank.startDate }}<br />
+          Delivery Date: {{ tank.deliveryDate }}<br />
+          Etapa actual: {{ etapaActual }}<br />
+          Status: {{ status }}
+        </p>
+        <div>
+          <label for="matDescription">Nombre del Tanque: </label>
+          <input id="matDescription" [(ngModel)]="tank.matDescription" placeholder="mat Descrption">
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
