@@ -13,6 +13,8 @@ class TanksRoutes {
     config() {
         this.router.get("/", tanksController_1.default.list);
         this.router.get("/:id", tanksController_1.default.getTank);
+        this.router.get("/startDate/:id", tanksController_1.default.getStartDate);
+        this.router.get("/deliveryDate/:id", tanksController_1.default.getDeliveryDate);
         this.router.post("/", tanksController_1.default.create);
         this.router.delete("/:id", tanksController_1.default.delete);
         this.router.put("/:id", tanksController_1.default.update);

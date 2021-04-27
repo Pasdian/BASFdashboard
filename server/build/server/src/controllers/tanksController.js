@@ -35,9 +35,36 @@ class TanksController {
     getTank(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const tank = yield database_1.default.query("SELECT * FROM tanks WHERE id = ?", [id]);
+            const tank = yield database_1.default.query("SELECT * FROM tanks WHERE id = ?", [
+                id,
+            ]);
+            console.log("getTank");
             if (tank.length > 0) {
                 return res.json(tank[0]);
+            }
+            res.status(404).json({ text: "The tank does not exist" });
+        });
+    }
+    getStartDate(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            const date = yield database_1.default.query("SELECT startDate FROM tanks WHERE id = ?", [
+                id,
+            ]);
+            if (date.length > 0) {
+                return res.json(date);
+            }
+            res.status(404).json({ text: "The tank does not exist" });
+        });
+    }
+    getDeliveryDate(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            const date = yield database_1.default.query("SELECT deliveryDate FROM tanks WHERE id = ?", [
+                id,
+            ]);
+            if (date.length > 0) {
+                return res.json(date);
             }
             res.status(404).json({ text: "The tank does not exist" });
         });

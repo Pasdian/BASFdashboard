@@ -1,6 +1,6 @@
 export interface Tank {
     id?: string;
-    matDescrption: string;
+    matDescription: string;
     batchNo: string;
     client: string;
     startDate: string;

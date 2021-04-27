@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TanksService } from 'src/app/services/tanks.service';
 import { Tank } from '../../Tank';
-import { TANKS } from '../../mock-tanks';
+// import { TANKS } from '../../mock-tanks';
 import { MessageService } from 'src/app/services/message.service';
+import * as moment from 'moment';
 
 
 @Component({
@@ -16,13 +17,23 @@ export class TanksComponent implements OnInit {
   selectedTank?: Tank
 
   tanks: any = [];
+  diff: number
 
   constructor(private tanksSerivce: TanksService, private messageService: MessageService) {}
 
 
   onSelect(tank: Tank): void {
     this.selectedTank = tank;
-    this.messageService.add(`HeroesComponent: Selected tank id=${tank.id}`);
+    this.messageService.add(`TanksComponent: Selected tank id=${tank.id}`);
+  }
+
+  getDuration():void{
+    const tank = this.selectedTank
+    const startdateString = tank.startDate
+    const deliveryDateString = tank.deliveryDate
+    var startDateMoment = moment(startdateString, "DD/MM/YYYY");
+    var deliveryDateMoment = moment(deliveryDateString, "DD/MM/YYYY")
+    this.diff = startDateMoment.diff(deliveryDateMoment, 'days')
   }
 
 
@@ -34,6 +45,7 @@ export class TanksComponent implements OnInit {
       },
       err => console.log(err)
     );
+    this.getDuration()
   }
   
 }

@@ -5,7 +5,7 @@
     (click)="onSelect(tank)"
     [class.selected]="tank === selectedTank"
   >
-    <span class="badge">{{ tank.id }}</span> 
+    <span class="badge">{{ tank.id }} </span> 
     <button type="button" class="btn btn-outline-primary" routerLink="/detail/{{tank.id}}">{{ tank.id }}</button>
 
   </li>

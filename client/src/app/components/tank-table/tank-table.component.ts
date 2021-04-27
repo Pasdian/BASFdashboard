@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TanksService } from 'src/app/services/tanks.service';
 
 @Component({
   selector: 'app-tank-table',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TankTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tanksSerivce: TanksService) { }
 
   ngOnInit(): void {
+    
+  }
+
+  getSemaphore(id:string):string{
+
+    return "danger"
+
   }
 
 }
