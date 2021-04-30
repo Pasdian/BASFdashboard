@@ -45,7 +45,6 @@ export class TanksComponent implements OnInit {
       },
       err => console.log(err)
     );
-    this.getDuration()
   }
   
 }

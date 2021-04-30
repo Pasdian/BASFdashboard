@@ -20,16 +20,16 @@ export class TanksService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getTanks() {
-    return this.http.get(`${this.API_URI}/tanks`)
+  getTanks():Observable<Tank[]> {
+    return this.http.get<Tank[]>(`${this.API_URI}/tanks`)
   }
 
-  getTank(id: string): Observable<any> {
+  getTank(id: string) {
     return this.http.get(`${this.API_URI}/tanks/${id}`)
   
   }
 
-  getStartDate(id:string){
+  getStartDate(id:string): Observable<any>{
     return this.http.get(`${this.API_URI}/tanks/startDate/${id}`)
   }
   getDeliveryDate(id:string){

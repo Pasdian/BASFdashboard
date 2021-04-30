@@ -24,7 +24,7 @@ class TanksController {
 
   public async getTank(req: Request, res: Response): Promise<any> {
     const { id } = req.params;
-    const tank: Tank[] = await pool.query("SELECT * FROM tanks WHERE id = ?", [
+    const tank = await pool.query("SELECT * FROM tanks WHERE id = ?", [
       id,
     ]);
     console.log("getTank")
@@ -36,22 +36,22 @@ class TanksController {
 
   public async getStartDate(req: Request, res: Response): Promise<any> {
     const { id } = req.params;
-    const date: string = await pool.query("SELECT startDate FROM tanks WHERE id = ?", [
+    const date: string[] = await pool.query("SELECT startDate FROM tanks WHERE id = ?", [
       id,
     ]);
     if (date.length > 0) {
-      return res.json(date);
+      return res.json(date[0]);
     }
     res.status(404).json({ text: "The tank does not exist" });
   }
 
   public async getDeliveryDate(req: Request, res: Response): Promise<any> {
     const { id } = req.params;
-    const date: string = await pool.query("SELECT deliveryDate FROM tanks WHERE id = ?", [
+    const date: string[] = await pool.query("SELECT deliveryDate FROM tanks WHERE id = ?", [
       id,
     ]);
     if (date.length > 0) {
-      return res.json(date);
+      return res.json(date[0]);
     }
     res.status(404).json({ text: "The tank does not exist" });
   }

@@ -1,5 +1,4 @@
-<div *ngIf="tank"
-      dur = getDuration(tank)>
+<div *ngIf="tank">
   <h2>{{ tank.id | uppercase }} Details</h2>
   <div><span>id: </span>{{ tank.id }}</div>
   <div>
@@ -10,8 +9,8 @@
   <div><span>Start Date: </span>{{ tank.startDate }}</div>
   <div><span>Delivery Date: </span>{{ tank.deliveryDate }}</div>
   <div><span>Etapa Actual: </span>{{ tank.etapaActual }}</div>
-  <div><span>Status: </span>{{ tank.status }}</div>
-  <div><span>Duration: </span>{{ diff }}</div>
+  <button type="button" class="btn btn-{{semaphore}}" >STATUS</button>
+  <div><span>Status: </span>{{ semaphore }}</div>
   
   <!-- <div>
     <label for="tank-desc">Descripción del Material: </label>

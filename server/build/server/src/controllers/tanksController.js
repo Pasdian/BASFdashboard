@@ -52,7 +52,7 @@ class TanksController {
                 id,
             ]);
             if (date.length > 0) {
-                return res.json(date);
+                return res.json(date[0]);
             }
             res.status(404).json({ text: "The tank does not exist" });
         });
@@ -64,7 +64,7 @@ class TanksController {
                 id,
             ]);
             if (date.length > 0) {
-                return res.json(date);
+                return res.json(date[0]);
             }
             res.status(404).json({ text: "The tank does not exist" });
         });
