@@ -6,7 +6,7 @@
     [class.selected]="tank === selectedTank"
   >
     <span class="badge">{{ tank.id }} </span> 
-    <button type="button" class="btn btn-outline-primary" routerLink="/detail/{{tank.id}}">{{ tank.id }}</button>
+    <button type="button" class="btn btn-outline-{{ tank.status }}" routerLink="/detail/{{tank.id}}">{{ tank.id }}</button>
 
   </li>
 </ul>

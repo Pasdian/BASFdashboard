@@ -6,45 +6,51 @@ import { Tank } from '../../Tank';
 import { MessageService } from 'src/app/services/message.service';
 import * as moment from 'moment';
 
-
 @Component({
   selector: 'app-tanks',
   templateUrl: './tanks.component.html',
   styleUrls: ['./tanks.component.css'],
 })
 export class TanksComponent implements OnInit {
-
-  selectedTank?: Tank
+  selectedTank?: Tank;
 
   tanks: any = [];
-  diff: number
+  diff: number;
 
-  constructor(private tanksSerivce: TanksService, private messageService: MessageService) {}
-
+  constructor(
+    private tanksService: TanksService,
+    private messageService: MessageService
+  ) {}
 
   onSelect(tank: Tank): void {
     this.selectedTank = tank;
     this.messageService.add(`TanksComponent: Selected tank id=${tank.id}`);
   }
 
-  getDuration():void{
-    const tank = this.selectedTank
-    const startdateString = tank.startDate
-    const deliveryDateString = tank.deliveryDate
-    var startDateMoment = moment(startdateString, "DD/MM/YYYY");
-    var deliveryDateMoment = moment(deliveryDateString, "DD/MM/YYYY")
-    this.diff = startDateMoment.diff(deliveryDateMoment, 'days')
-  }
-
-
   ngOnInit(): void {
-    this.tanksSerivce.getTanks().subscribe(
-      res => {
+    this.tanksService.getTanks().subscribe(
+      (res) => {
         this.tanks = res;
-        
+        res.forEach((tank) => {
+          var today = moment();
+          var deliveryDateMoment = moment(tank.deliveryDate, 'DD/MM/YYYY');
+          var diff = deliveryDateMoment.diff(today, 'days');
+          if (diff < 0) {
+            tank.status = 'danger';
+          } else {
+            if (diff == 1 || diff == 0) {
+              tank.status = 'warning';
+            } else {
+              if (diff >= 2) {
+                tank.status = 'success';
+              }
+            }
+          }
+        });
       },
-      err => console.log(err)
+      (err) => console.log(err)
     );
   }
+
   
 }

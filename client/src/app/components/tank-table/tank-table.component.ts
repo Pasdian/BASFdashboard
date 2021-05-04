@@ -9,40 +9,46 @@ import { TanksService } from 'src/app/services/tanks.service';
   templateUrl: './tank-table.component.html',
   styleUrls: ['./tank-table.component.css'],
 })
-export class TankTableComponent implements OnInit, OnDestroy {
+export class TankTableComponent implements OnInit {
 
-  tank?: any;
+  tanks: any = [];
   semaphore: string
   private subscriptions: Subscription[] = []
 
-  constructor( private tankService: TanksService) {}
+  constructor(private tanksService: TanksService) {}
 
-  ngOnInit(): void {}
-
-  getSemaphore(id: string): string {
-    return "primary"
-    // this.subscriptions.push(this.tankService.getTank(id).subscribe((tank) => {
-    //   this.tank = tank;
-    //   console.log('Tank_table');
-    //   var today = moment();
-    //   var deliveryDateMoment = moment(this.tank.deliveryDate, 'DD/MM/YYYY');
-    //   var diff = deliveryDateMoment.diff(today, 'days');
-      
-    //   if (diff < 0) {
-    //     this.semaphore = 'danger'
-    //   } else {
-    //     if (diff == 1 || diff == 0) {
-    //       this.semaphore = 'warning';
-    //     } else {
-    //       if (diff >= 2) {
-    //         this.semaphore = 'success';
-    //       }
-    //     }
-    //   }
-    // }));
-    }
-
-  ngOnDestroy(){
-    this.subscriptions.forEach(subscription => subscription.unsubscribe());
+  ngOnInit(): void {
+    this.tanksService.getTanks().subscribe(
+      (res) => {
+        this.tanks = res;
+        res.forEach((tank) => {
+          var today = moment();
+          var deliveryDateMoment = moment(tank.deliveryDate, 'DD/MM/YYYY');
+          var diff = deliveryDateMoment.diff(today, 'days');
+          if (diff < 0) {
+            tank.status = 'danger';
+          } else {
+            if (diff == 1 || diff == 0) {
+              tank.status = 'warning';
+            } else {
+              if (diff >= 2) {
+                tank.status = 'success';
+              }
+            }
+          }
+        });
+      },
+      (err) => console.log(err)
+    );
   }
+
+  getStatus(id): string{
+    for (var i=0; i < this.tanks.length; i++)
+    if (this.tanks[i]['id'] == id)
+      return this.tanks[i].status;
+
+
+  }
+
+  
 }
