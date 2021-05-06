@@ -10,10 +10,8 @@ import { TanksService } from 'src/app/services/tanks.service';
   styleUrls: ['./tank-table.component.css'],
 })
 export class TankTableComponent implements OnInit {
-
   tanks: any = [];
-  semaphore: string
-  private subscriptions: Subscription[] = []
+  semaphore: string;
 
   constructor(private tanksService: TanksService) {}
 
@@ -33,6 +31,8 @@ export class TankTableComponent implements OnInit {
             } else {
               if (diff >= 2) {
                 tank.status = 'success';
+              } else {
+                tank.status = 'primary';
               }
             }
           }
@@ -42,13 +42,10 @@ export class TankTableComponent implements OnInit {
     );
   }
 
-  getStatus(id): string{
-    for (var i=0; i < this.tanks.length; i++)
-    if (this.tanks[i]['id'] == id)
-      return this.tanks[i].status;
-
-
+  getStatus(id): string {
+    for (var i = 0; i < this.tanks.length; i++)
+      if (this.tanks[i]['id'] == id) {
+        return this.tanks[i].status;
+      }
   }
-
-  
 }
