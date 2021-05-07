@@ -1,6 +1,6 @@
 # BASFdashboard
 
-##Checkist for deployment
+## Checkist for deployment
 
 1. NodeJS
 2. Angular
